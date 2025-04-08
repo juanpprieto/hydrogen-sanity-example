@@ -2,44 +2,20 @@
 
 Hydrogen is Shopify’s stack for headless commerce. Hydrogen is designed to dovetail with [Remix](https://remix.run/), Shopify’s full stack web framework. This template contains a **minimal setup** of components, queries and tooling to get started with Hydrogen.
 
-[Check out Hydrogen docs](https://shopify.dev/custom-storefronts/hydrogen)
-[Get familiar with Remix](https://remix.run/docs/en/v1)
+## Instruction 
 
-## What's included
+This repo is broken, becausde Hydrogen 2025.1.3+ runs under Vite v6. This version fails to resolve `hydrogen-sanity` `worker` export during SSR and instead resolves the `browser` export causing the following error:
 
-- Remix
-- Hydrogen
-- Oxygen
-- Vite
-- Shopify CLI
-- ESLint
-- Prettier
-- GraphQL generator
-- TypeScript and JavaScript flavors
-- Minimal setup of components and routes
+![Screenshot 2025-04-08 at 2 48 36 PM](https://github.com/user-attachments/assets/4c302010-3b2a-415c-97ad-ca2872631f42)
 
-## Getting started
+### Fix
 
-**Requirements:**
+Modify the hydrogen's version to the snapshot that includes the fix: 
 
-- Node.js version 18.0.0 or higher
+```npm i --force @shopify/hydrogen@0.0.0-snapshot-20250408212515```
 
-```sh
-npm create @shopify/hydrogen@latest
-```
+then run
 
-## Building for production
+`npm run dev` and `setServerClient` should no longer error.
 
-```sh
-npm run build
-```
-
-## Local development
-
-```sh
-npm run dev
-```
-
-## Setup for using Customer Account API (`/account` section)
-
-Follow step 1 and 2 of <https://shopify.dev/docs/custom-storefronts/building-with-the-customer-account-api/hydrogen#step-1-set-up-a-public-domain-for-local-development>
+DM  me if you need a `.env` 
