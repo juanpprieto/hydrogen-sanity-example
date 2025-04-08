@@ -4,7 +4,13 @@ Hydrogen is Shopify’s stack for headless commerce. Hydrogen is designed to dov
 
 ## Instruction 
 
-This repo is broken because Hydrogen `2025.1.3+` uses Vite v6. This version fails to resolve `hydrogen-sanity` `worker` export during SSR and instead resolves the `browser` export causing the following error:
+This repo is broken because Hydrogen `2025.1.3+` uses Vite v6. This version fails to resolve `hydrogen-sanity` `worker` export during SSR and instead resolves the `browser` export causing the following error (this was not an issue in vite 5)
+
+###  To reproduce: 
+
+`npm i && npm run dev`
+
+The following error should occur:
 
 ![Screenshot 2025-04-08 at 2 48 36 PM](https://github.com/user-attachments/assets/4c302010-3b2a-415c-97ad-ca2872631f42)
 
