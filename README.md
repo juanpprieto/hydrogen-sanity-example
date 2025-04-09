@@ -18,7 +18,7 @@ The following error should occur:
 
 Modify the hydrogen's version to the snapshot that includes the fix: 
 
-```npm i --force @shopify/hydrogen@0.0.0-snapshot-20250408212515```
+```rm -rf package-lock.json && npm i --force @shopify/mini-oxygen@0.0.0-snapshot-20250408225709```
 
 then run
 
